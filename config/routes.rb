@@ -1,5 +1,5 @@
 SampleApp::Application.routes.draw do
-  
+  resources :microposts, only: [:new, :create, :destroy]
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   root 'static_pages#home'
